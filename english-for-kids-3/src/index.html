@@ -11,41 +11,43 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header">
-        <!-- MENU BAR -->
-        <div class="wrapper" id="menu">
-            <div id="sidebar" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i>Main Page</a></li>
-                    <li><a href="#"><i class="fas fa-leaf"></i></i></i>Nature</a></li>
-                    <li><a href="#"><i class="fas fa-pizza-slice"></i></i>Food</a></li>
-                    <li><a href="#"><i class="fas fa-futbol"></i></i>Sport</a></li>
-                    <li><a href="#"><i class="fas fa-tshirt"></i></i>Clothes</a></li>
-                    <li><a href="#"><i class="fas fa-dog"></i></i>Pets</a></li>
-                    <li><a href="#"><i class="fas fa-paw"></i></i>Wild Animals</a></li>
-                    <li><a href="#"><i class="fas fa-snowflake"></i></i></i>Winter</a></li>
-                    <li><a href="#"><i class="fas fa-ghost"></i></i>Halloween</a></li>
-                </ul>
+    <header>
+        <div class="header-container">
+            <!-- MENU BAR -->
+            <div class="wrapper" id="menu">
+                <div id="sidebar" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i>Main Page</a></li>
+                        <li><a href="#"><i class="fas fa-leaf"></i></i></i>Nature</a></li>
+                        <li><a href="#"><i class="fas fa-pizza-slice"></i></i>Food</a></li>
+                        <li><a href="#"><i class="fas fa-futbol"></i></i>Sport</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i></i>Clothes</a></li>
+                        <li><a href="#"><i class="fas fa-dog"></i></i>Pets</a></li>
+                        <li><a href="#"><i class="fas fa-paw"></i></i>Wild Animals</a></li>
+                        <li><a href="#"><i class="fas fa-snowflake"></i></i></i>Winter</a></li>
+                        <li><a href="#"><i class="fas fa-ghost"></i></i>Halloween</a></li>
+                    </ul>
+                </div>
+                <span class="openbtn" onclick="openNav()">&#9776;</span>
             </div>
-            <span class="openbtn" onclick="openNav()">&#9776;</span>
+            <!-- TRAIN/PLAY -->
+            <!-- source: https://codepen.io/kuladeep93/pen/KvzYvd -->
+            <label class="switch">
+                <input type="checkbox" id="togBtn">
+                <div class="slider round">
+                    <span class="on">Train</span>
+                    <span class="off">Play</span>
+                </div>
+            </label>
         </div>
-        <!-- TRAIN/PLAY -->
-        <!-- source: https://codepen.io/kuladeep93/pen/KvzYvd -->
-        <label class="switch">
-            <input type="checkbox" id="togBtn">
-            <div class="slider round">
-                <span class="on">Train</span>
-                <span class="off">Play</span>
-            </div>
-        </label>
         </div>
     </header>
     <!-- TITLE, CARD -->
     <section class="content">
         <div class="title">Have a nice game!</div>
         <!-- CARD -->
-            <div class="cards" id = "card"></div>
+        <div class="category-container" id="card"></div>
     </section>
     <script type="module" src="./components/card.component.js"></script>
 </body>
