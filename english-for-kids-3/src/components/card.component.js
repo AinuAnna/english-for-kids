@@ -9,31 +9,31 @@ import cardsMain from '../data/cards.data.js';
 
 function createCard(res) {
     const card = document.createElement("div");
-    
-    const cardClass = document.createElement("div");
     card.classList.add('card');
-    card.appendChild(cardClass);
 
     const front = document.createElement("div");
-    cardClass.classList.add('front');
-    cardClass.appendChild(front);
+    front.classList.add('front');
+    card.appendChild(front);
 
     const cardImg = document.createElement("div");
-    front.classList.add('card-img');
-    front.appendChild(cardImg);
-    const image = document.createTextNode(res.image);
-    front.appendChild(image);
+    cardImg.classList.add('card-img');
+    cardImg.style.backgroundImage = `url(${res.image})`;
 
     const description = document.createElement("div");
-    cardImg.classList.add('description');
-    cardImg.appendChild(description);
+    description.classList.add('description');
+
+    front.append(cardImg, description);
 
     const descriptionText = document.createElement("div");
-    description.classList.add('description-text');
+    descriptionText.classList.add('description-text');
     description.appendChild(descriptionText);
 
+    const descriptionTitle = document.createElement("div");
+    descriptionTitle.classList.add('description-title');
+    descriptionText.appendChild(descriptionTitle);
+
     const category = document.createTextNode(res.category);
-    descriptionText.appendChild(category);
+    descriptionTitle.appendChild(category);
 
     const container = document.querySelector("#card");
     container.appendChild(card);
