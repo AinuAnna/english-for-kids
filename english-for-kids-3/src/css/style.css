@@ -262,6 +262,13 @@ input:checked + .slider .off {
 .rotate {
   transform: rotateY(180deg);
 }
+.btn-rotate{
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
 .card-img {
   border-radius: 19px 19px 0 0;
