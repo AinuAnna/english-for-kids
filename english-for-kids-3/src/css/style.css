@@ -166,10 +166,10 @@ input:checked + .slider:before {
   -ms-transform: translateX(60px);
   transform: translateX(60px);
 }
-.on {
+.slider__on {
   display: none;
 }
-.on, .off{
+.slider__on, .slider__off{
   color: white;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -178,13 +178,13 @@ input:checked + .slider:before {
   font-size: 18px;
   user-select:none;
 }
-.off{
+.slider__off{
   left: 66%;
 }
-input:checked + .slider .on {
+input:checked + .slider .slider__on {
   display: block;
 }
-input:checked + .slider .off {
+input:checked + .slider .slider__off {
   display: none;
 }
 /* Rounded sliders */
