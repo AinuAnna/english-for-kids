@@ -16,9 +16,6 @@ export class State {
     // takes listener and write it in new array of listeners
     subscribe(listener) {
         this._listeners.push(listener);
-        return () => {
-            this._listeners = this._listeners.filter(x => x !== listener);
-        }
     }
 
     update(state) {

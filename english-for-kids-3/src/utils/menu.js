@@ -55,6 +55,7 @@ export class Menu {
         a.append(icon, category);
 
         a.onclick = (e) => {
+            //clean anchor
             e.preventDefault();
             State.instance.setCategory(res.category);
             State.instance.setMenuState(false);
