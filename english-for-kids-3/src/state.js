@@ -6,7 +6,7 @@ export class State {
         isMenuOpened: false,
         isTrain: true,
         // if there is no selected category then we on the "main" page
-        selectedCategory: null,
+        selectedCategoryId: null,
         categories: cardsMain,
         cards: [],
     };
@@ -28,11 +28,11 @@ export class State {
         return this._state;
     }
 
-    setCategory(category) {
+    setCategory(categoryId) {
         this.update({
             ...this._state,
-            selectedCategory: category,
-            cards: cards[category] || [],
+            selectedCategoryId: categoryId,
+            cards: cards[categoryId] || [],
         });
     }
 

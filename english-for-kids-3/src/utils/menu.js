@@ -3,6 +3,7 @@ import { State } from '../state.js';
 const mainPage = {
     text: 'Main Page',
     category: null,
+    categoryId: null,
     image: 'assets/img/main-page/home.jpg',
     newIconClass: 'fa-home',
 }
@@ -23,7 +24,7 @@ export class Menu {
         sideBar.style.width = state.isMenuOpened ? "300px" : "0";
 
         container.innerHTML = "";
-        const elements = [mainPage, ...state.categories].map(c => this.createMenu(c, state.selectedCategory));
+        const elements = [mainPage, ...state.categories].map(c => this.createMenu(c, state.selectedCategoryId));
         container.append(...elements);
     }
 
@@ -35,13 +36,13 @@ export class Menu {
         State.instance.setMenuState(false);
     }
 
-    createMenu(res, selectedCategory) {
+    createMenu(res, selectedCategoryId) {
         const menu = document.createElement('li');
 
         const a = document.createElement('a');
         a.setAttribute('href', '#');
         menu.append(a);
-        if (res.category === selectedCategory) {
+        if (res.categoryId === selectedCategoryId) {
             a.classList.add("active");
         }
 
@@ -57,7 +58,7 @@ export class Menu {
         a.onclick = (e) => {
             //clean anchor
             e.preventDefault();
-            State.instance.setCategory(res.category);
+            State.instance.setCategory(res.categoryId);
             State.instance.setMenuState(false);
         }
 

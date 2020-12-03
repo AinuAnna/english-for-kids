@@ -9,7 +9,7 @@ export class CategoriesList {
     render() {
         const container = document.querySelector("#categories");
         const state = State.instance.getState();
-        const isVisible = !state.selectedCategory;
+        const isVisible = state.selectedCategoryId == null;
 
         container.innerHTML = "";
         if (!isVisible) {
@@ -23,7 +23,7 @@ export class CategoriesList {
     renderCategory(res) {
         const card = this.getDivWithClass('card');
         card.onclick = () => {
-            State.instance.setCategory(res.category);
+            State.instance.setCategory(res.categoryId);
         }
         card.setAttribute("level", res.level);
 

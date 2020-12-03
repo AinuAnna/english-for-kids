@@ -10,7 +10,7 @@ export class CardList {
     render() {
         const container = document.querySelector("#cards");
         const state = State.instance.getState();
-        const isVisible = state.selectedCategory;
+        const isVisible = state.selectedCategoryId !== null;
 
         container.innerHTML = "";
         if (!isVisible) {
