@@ -86,6 +86,9 @@ ul li a :active{
   cursor: pointer;
   transition: .3s;
 }
+.active{
+  color: #331313;
+}
 /* ICON COLORS */
 .fa-palette{
   color: #c7c7c7;
@@ -201,7 +204,7 @@ input:checked + .slider .off {
   padding: 0 79px 0 79px;
 }
 /* CARD */
-.cards, .category-container {
+.category-container {
   width: calc(100%-158px);
   display: flex;
   justify-content: space-between;
@@ -209,11 +212,7 @@ input:checked + .slider .off {
   flex-wrap: wrap;
   padding: 0px 79px 0 79px;
 }
-
-.cards {
-  padding-top: 30px;
-  position: relative;
-}  
+ 
 .category-container {
   padding-top: 30px;
 }

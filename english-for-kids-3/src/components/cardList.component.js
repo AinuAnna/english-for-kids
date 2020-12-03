@@ -1,3 +1,4 @@
+import { cards } from '../data/cards.data.js';
 import { State } from '../state.js'
 
 export class CardList {
@@ -9,16 +10,22 @@ export class CardList {
     render() {
         const container = document.querySelector("#cards");
         const state = State.instance.getState();
+        const isVisible = state.selectedCategory;
+
+        container.innerHTML = "";
+        if (!isVisible) {
+            return;
+        }
 
         const elements = state.cards.map(c => this.createCard(c));
         container.append(...elements);
     }
 
     createCard(res) {
-        const cards = this.getDivWithClass('card');
+        const card = this.getDivWithClass('card');
 
         const front = this.getDivWithClass('front');
-        cards.appendChild(front);
+        card.appendChild(front);
 
         const cardImg = this.getDivWithClass('card-img');
         cardImg.style.backgroundImage = `url(${res.image})`;
@@ -41,11 +48,12 @@ export class CardList {
 
         const rotate = document.createElement('img');
         rotate.setAttribute('src', 'assets/img/rotate-img.svg');
+
         rotate.classList.add('btn-rotate');
         rtButton.appendChild(rotate);
 
         const back = this.getDivWithClass('back');
-        cards.appendChild(back);
+        card.appendChild(back);
 
         const cardImg2 = this.getDivWithClass('card-img');
         cardImg2.style.backgroundImage = `url(${res.image})`;
@@ -63,8 +71,8 @@ export class CardList {
         const translation = document.createTextNode(res.translation);
         descriptionTitle2.appendChild(translation);
 
-        const container = document.querySelector("#cards");
-        container.appendChild(cards);
+        this.setupRotateBehaviour(rtButton, card, front, back);
+        return card;
     }
 
     getDivWithClass(className) {
@@ -72,18 +80,18 @@ export class CardList {
         element.classList.add(className);
         return element;
     }
-    rotateCards() {
-        let rotateButton = this.querySelector('.rotate-btn');
-        let front = this.rotate.querySelector('.front');
-        let back = this.rotate.querySelector('back');
 
-        rotateButton.addEventListener('click', function () {
+    setupRotateBehaviour(rtButton, card, front, back) {
+        rtButton.onclick = () => {
             front.classList.add('front-rotate');
             back.classList.add('back-rotate');
-        });
-        this.card.addEventListener('mouseleave', function () {
-            front.classList.remove('front-rotate');
-            back.classList.remove('back-rotate');
+        }
+
+        card.addEventListener('mouseleave', function () {
+            if (front.classList.contains('front-rotate')) {
+                front.classList.remove('front-rotate');
+                back.classList.remove('back-rotate');
+            }
         });
     }
 

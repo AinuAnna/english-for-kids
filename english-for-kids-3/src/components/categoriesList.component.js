@@ -22,6 +22,9 @@ export class CategoriesList {
 
     renderCategory(res) {
         const card = this.getDivWithClass('card');
+        card.onclick = () => {
+            State.instance.setCategory(res.category);
+        }
         card.setAttribute("level", res.level);
 
         const front = this.getDivWithClass('front');

@@ -3,11 +3,12 @@ import { cards, cardsMain } from "./data/cards.data.js";
 
 export class State {
     _state = {
+        isMenuOpened: false,
         isTrain: true,
         // if there is no selected category then we on the "main" page
         selectedCategory: null,
         categories: cardsMain,
-        cards: cards,
+        cards: [],
     };
 
     _listeners = [];
@@ -23,10 +24,26 @@ export class State {
     update(state) {
         this._state = state;
         this._listeners.forEach(x => x(this._state));
+        console.log(this._state);
     }
 
     getState() {
         return this._state;
+    }
+
+    setCategory(category) {
+        this.update({
+            ...this._state,
+            selectedCategory: category,
+            cards: cards[category] || [],
+        });
+    }
+
+    setMenuState(isOpened) {
+        this.update({
+            ...this._state,
+            isMenuOpened: isOpened,
+        })
     }
 
     static get instance() {
