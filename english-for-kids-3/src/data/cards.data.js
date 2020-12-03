@@ -2,49 +2,49 @@ export const cardsMain = [
   {
     category: 'Nature',
     image: 'assets/img/main-page/nature.jpg',
-    menuIcon: 'assets/icon/leaf-solid.svg',
+    newIconClass: 'fa-leaf',
     level: 0
   },
   {
     category: 'Food',
     image: 'assets/img/main-page/food.png',
-    menuIcon: 'assets/icon/pizza-slice-solid.svg',
+    newIconClass: 'fa-pizza-slice',
     level: 1
   },
   {
     category: 'Sport',
     image: 'assets/img/main-page/sport.png',
-    menuIcon: 'assets/icon/futbol-solid.svg',
+    newIconClass: 'fa-futbol',
     level: 2
   },
   {
     category: 'Clothes',
     image: 'assets/img/main-page/clothes.jpg',
-    menuIcon: 'assets/icon/tshirt-solid.svg',
+    newIconClass: 'fa-tshirt',
     level: 3
   },
   {
     category: 'Pets',
     image: 'assets/img/main-page/pets.jpg',
-    menuIcon: 'assets/icon/dog-solid.svg',
+    newIconClass: 'fa-dog',
     level: 4
   },
   {
     category: 'Wild Animals',
     image: 'assets/img/main-page/wild-animals.jpg',
-    menuIcon: 'assets/icon/paw-solid.svg',
+    newIconClass: 'fa-paw',
     level: 5
   },
   {
     category: 'Winter',
     image: 'assets/img/main-page/winter.jpg',
-    menuIcon: 'assets/icon/snowflake-solid.svg',
+    newIconClass: 'fa-snowflake',
     level: 6
   },
   {
     category: 'Activities',
     image: 'assets/img/main-page/activity.jpg',
-    menuIcon: 'assets/icon/palette-solid.svg',
+    newIconClass: 'fa-palette',
     level: 7
   },
 ];

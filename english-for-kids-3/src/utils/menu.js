@@ -1,5 +1,11 @@
 import { State } from '../state.js';
 
+const mainPage = {
+    category: 'Main Page',
+    image: 'assets/img/main-page/home.jpg',
+    newIconClass: 'fa-home',
+}
+
 export class Menu {
     constructor() {
         this.render();
@@ -10,14 +16,16 @@ export class Menu {
         const container = document.querySelector("#sidebar");
         const state = State.instance.getState();
 
+        const main = this.createMenu(mainPage);
         const elements = state.categories.map(c => this.createMenu(c));
-        container.append(...elements);
+        container.append(main, ...elements);
     }
-    openNav() {
+
+    static openNav() {
         document.getElementById("sidebar").style.width = "300px";
     }
 
-    closeNav() {
+    static closeNav() {
         document.getElementById("sidebar").style.width = "0";
     }
 
@@ -29,8 +37,9 @@ export class Menu {
         menu.append(a);
 
         const icon = document.createElement('i');
-        icon.style.backgroundImage = `url(${res.menuIcon})`;
         icon.classList.add('fas');
+
+        icon.classList.add(res.newIconClass);
 
         const category = document.createTextNode(res.category);
 
