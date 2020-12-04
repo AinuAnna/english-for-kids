@@ -11,7 +11,7 @@ const mainPage = {
 export class Menu {
     constructor() {
         this.render();
-        State.instance.subscribe(() => this.render());
+        //State.instance.subscribe(() => this.render());
         document.getElementById("openBtn").addEventListener("click", () => this.openNav());
         document.getElementById("closeBtn").addEventListener("click", () => this.closeNav());
     }
@@ -21,6 +21,7 @@ export class Menu {
         const state = State.instance.getState();
 
         const sideBar = document.getElementById("sidebar");
+        //в css
         sideBar.style.width = state.isMenuOpened ? "300px" : "0";
 
         container.innerHTML = "";

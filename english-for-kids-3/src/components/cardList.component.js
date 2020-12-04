@@ -13,12 +13,10 @@ export class CardList {
         const isVisible = state.selectedCategoryId !== null;
 
         container.innerHTML = "";
-        if (!isVisible) {
-            return;
-        }
-
+        if (isVisible) {
         const elements = state.cards.map(c => this.createCard(c));
         container.append(...elements);
+        }
     }
 
     createCard(res) {
