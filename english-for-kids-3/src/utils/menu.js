@@ -42,6 +42,7 @@ export class Menu {
         const a = document.createElement('a');
         a.setAttribute('href', '#');
         menu.append(a);
+
         if (res.categoryId === selectedCategoryId) {
             a.classList.add("active");
         }

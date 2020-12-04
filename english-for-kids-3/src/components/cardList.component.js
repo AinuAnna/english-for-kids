@@ -72,13 +72,22 @@ export class CardList {
         descriptionTitle2.appendChild(translation);
 
         this.setupRotateBehaviour(rtButton, card, front, back);
+        this.setupAudioClick(card, res.audioSrc);
         return card;
+
+
     }
 
     getDivWithClass(className) {
         const element = document.createElement('div');
         element.classList.add(className);
         return element;
+    }
+    setupAudioClick(card, link) {
+        card.onclick = () => {
+            const audio = new Audio(link);
+            audio.play();
+        }
     }
 
     setupRotateBehaviour(rtButton, card, front, back) {
