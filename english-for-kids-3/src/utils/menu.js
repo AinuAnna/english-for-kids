@@ -4,14 +4,13 @@ const mainPage = {
     text: 'Main Page',
     category: null,
     categoryId: null,
-    image: 'assets/img/main-page/home.jpg',
     newIconClass: 'fa-home',
 }
 
 export class Menu {
     constructor() {
         this.render();
-        //State.instance.subscribe(() => this.render());
+        State.instance.subscribe(() => this.render());
         document.getElementById("openBtn").addEventListener("click", () => this.openNav());
         document.getElementById("closeBtn").addEventListener("click", () => this.closeNav());
     }
@@ -21,8 +20,7 @@ export class Menu {
         const state = State.instance.getState();
 
         const sideBar = document.getElementById("sidebar");
-        //в css
-        sideBar.style.width = state.isMenuOpened ? "300px" : "0";
+        state.isMenuOpened ? sideBar.classList.add('opened') : sideBar.classList.remove('opened');
 
         container.innerHTML = "";
         const elements = [mainPage, ...state.categories].map(c => this.createMenu(c, state.selectedCategoryId));

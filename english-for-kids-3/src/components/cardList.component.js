@@ -14,8 +14,8 @@ export class CardList {
 
         container.innerHTML = "";
         if (isVisible) {
-        const elements = state.cards.map(c => this.createCard(c));
-        container.append(...elements);
+            const elements = state.cards.map(c => this.createCard(c));
+            container.append(...elements);
         }
     }
 
@@ -89,7 +89,8 @@ export class CardList {
     }
 
     setupRotateBehaviour(rtButton, card, front, back) {
-        rtButton.onclick = () => {
+        rtButton.onclick = (e) => {
+            e.preventDefault();
             front.classList.add('front-rotate');
             back.classList.add('back-rotate');
         }

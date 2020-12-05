@@ -72,6 +72,9 @@ ul li a :active{
 .openbtn:hover{
   color: #e9365d;
 }
+.opened{
+  width: 300px;
+}
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -297,10 +300,10 @@ input:checked + .slider .slider__off {
 .description-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 24px;
   color: #344a66;
-  margin-top: 19px;
+  margin-top: 25px;
 }
 
 .description-number {
