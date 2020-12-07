@@ -5,7 +5,6 @@ export class State {
     _state = {
         isMenuOpened: false,
         isTrain: true,
-        isAudioPlay: false,
         // if there is no selected category then we on the "main" page
         selectedCategoryId: null,
         categories: cardsMain,
@@ -41,13 +40,6 @@ export class State {
         this.update({
             ...this._state,
             isMenuOpened: isOpened,
-        })
-    }
-
-    setAudio(isPlay) {
-        this.update({
-            ...this._state,
-            isAudioPlay: isPlay,
         })
     }
 
