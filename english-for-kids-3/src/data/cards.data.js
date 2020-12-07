@@ -7,7 +7,7 @@ export const cardsMain = [
   },
   {
     category: 'Food',
-    image: 'assets/img/main-page/food.png',
+    image: 'assets/img/main-page/food.jpg',
     newIconClass: 'fa-pizza-slice',
     categoryId: 1
   },
@@ -219,10 +219,10 @@ export const cards = {
       audioSrc: 'assets/audio/clothes/pronunciation_en_jacket.mp3'
     },
     {
-      word: 'Suit',
-      translation: 'Костюм',
-      image: 'assets/img/clothes/suit.jpg',
-      audioSrc: 'assets/audio/clothes/pronunciation_en_suit.mp3'
+      word: 'Sweater',
+      translation: 'Свитер',
+      image: 'assets/img/clothes/sweater.jpg',
+      audioSrc: 'assets/audio/clothes/pronunciation_en_sweater.mp3'
     },
     {
       word: 'Socks',
@@ -303,13 +303,13 @@ export const cards = {
     {
       word: 'Elephant',
       translation: 'Слон',
-      image: 'assets/img/wild-animals/elephant.jpg',
+      image: 'assets/img/wild-animals/elephant.png',
       audioSrc: 'assets/audio/wild-animals/pronunciation_en_elephant.mp3'
     },
     {
       word: 'Tiger',
       translation: 'Тигр',
-      image: 'assets/img/wild-animals/tiger.jpg',
+      image: 'assets/img/wild-animals/tiger.jpeg',
       audioSrc: 'assets/audio/wild-animals/pronunciation_en_tiger.mp3'
     },
     {
@@ -325,15 +325,15 @@ export const cards = {
       audioSrc: 'assets/audio/wild-animals/pronunciation_en_giraffe.mp3'
     },
     {
-      word: 'Pinguin',
+      word: 'Penguin',
       translation: 'Пингвин',
-      image: 'assets/img/wild-animals/pinguin.jpg',
-      audioSrc: 'assets/audio/wild-animals/pronunciation_en_pinguin.mp3'
+      image: 'assets/img/wild-animals/penguin.jpg',
+      audioSrc: 'assets/audio/wild-animals/pronunciation_en_penguin.mp3'
     },
     {
       word: 'Frog',
       translation: 'Лягушка',
-      image: 'assets/img/wild-animals/frog.jpg',
+      image: 'assets/img/wild-animals/frog.png',
       audioSrc: 'assets/audio/wild-animals/pronunciation_en_frog.mp3'
     },
     {
@@ -357,34 +357,34 @@ export const cards = {
       audioSrc: 'assets/audio/winter/pronunciation_en_snow.mp3'
     },
     {
-      word: 'December',
-      translation: 'Декабрь',
-      image: 'assets/img/winter/waterfall.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_waterfall.mp3'
+      word: 'Gift',
+      translation: 'Подарок',
+      image: 'assets/img/winter/gift.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_gift.mp3'
     },
     {
-      word: 'January',
-      translation: 'Январь',
-      image: 'assets/img/winter/waterfall.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_waterfall.mp3'
+      word: 'Santa Claus',
+      translation: 'Санта Клаус',
+      image: 'assets/img/winter/santa.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_santa_claus.mp3'
     },
     {
-      word: 'February',
-      translation: 'Февраль',
-      image: 'assets/img/winter/waterfall.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_waterfall.mp3'
+      word: 'New Year',
+      translation: 'Новый Год',
+      image: 'assets/img/winter/new_year.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_new_year.mp3'
     },
     {
-      word: 'Cristmas',
+      word: 'Christmas',
       translation: 'Рождество',
-      image: 'assets/img/winter/cristmas.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_cristmas.mp3'
+      image: 'assets/img/winter/christmas.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_christmas.mp3'
     },
     {
-      word: 'Ice',
-      translation: 'Лёд',
-      image: 'assets/img/winter/ice.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_ice.mp3'
+      word: 'Christmas Tree',
+      translation: 'Рождественская ёлка',
+      image: 'assets/img/winter/christmas_tree.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_christmas_tree.mp3'
     },
     {
       word: 'Snowman',
@@ -393,10 +393,10 @@ export const cards = {
       audioSrc: 'assets/audio/winter/pronunciation_en_snowman.mp3'
     },
     {
-      word: 'Cold',
-      translation: 'Холод',
-      image: 'assets/img/winter/cold.jpg',
-      audioSrc: 'assets/audio/winter/pronunciation_en_cold.mp3'
+      word: 'Lights',
+      translation: 'Герлянды',
+      image: 'assets/img/winter/lights.jpg',
+      audioSrc: 'assets/audio/winter/pronunciation_en_lights.mp3'
     }
   ],
   7: [
