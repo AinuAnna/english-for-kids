@@ -73,7 +73,7 @@ ul li a :active{
   color: #e9365d;
 }
 .opened{
-  width: 300px;
+  width: 30%;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -89,8 +89,8 @@ ul li a :active{
   cursor: pointer;
   transition: .3s;
 }
-.active{
-  color: #331313;
+a.active{
+  color: #ffbb00;
 }
 /* ICON COLORS */
 .fa-palette{
@@ -329,3 +329,17 @@ input:checked + .slider .slider__off {
 @media (max-width: 450px) {
   .category-container {
     padding: 30px 40px 0 40px; } }
+@media (max-width: 1300px) {
+    .card {
+        width: calc(100% / 3 - 25px);
+        margin-bottom: 40px; } }
+@media (max-width: 1100px) {
+    .card {
+        width: calc(100% / 2 - 25px);
+        margin-bottom: 40px; } }
+@media (max-width: 600px) {
+    .card {
+        width: 100%; } }
+@media (max-width: 1100px) {
+    .opened{width: 100%;}
+        }
