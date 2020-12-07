@@ -22,7 +22,6 @@ export class State {
     update(state) {
         this._state = state;
         this._listeners.forEach(x => x(this._state));
-        console.log(this._state);
     }
 
     getState() {
