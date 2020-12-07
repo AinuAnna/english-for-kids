@@ -1,7 +1,8 @@
-import { cards, cardsMain } from "./data/cards.data.js";
+import { cards, cardsMain } from "./data/cards.data";
 
 
 export class State {
+
     _state = {
         isMenuOpened: false,
         isTrain: true,
