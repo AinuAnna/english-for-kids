@@ -1,4 +1,4 @@
-import { cards, cardsMain } from "./data/cards.data";
+import { cards, cardsMain } from "./data/cards.data.js";
 
 
 export class State {
